@@ -31,7 +31,7 @@
 // Масив:
 //
 
-// let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+ let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 
 //
 // ШАБЛОН:
@@ -48,11 +48,12 @@
 // замість 'ITEM OF ARRAY' підставити елемент з масиву щоб получився цілий список з даними з масиву
 //
 // -----------------------------------------------
+document.write(`<ul>`);
+for (let i = 0; i < listOfItems.length; i++) {
+     document.write(`<ul> <li>${listOfItems[i]}</li> </ul`)
 
-// for (let i = 0; i < listOfItems.length; i++) {
-//      document.write(`<ul> <li>${listOfItems[i]}</li> </ul`)
-//
-// }
+}
+document.write(`</ul>`);
 
 // ---------------------------------------------------------------------------
 //
