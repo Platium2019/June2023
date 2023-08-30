@@ -1,21 +1,16 @@
 // - створити функцію яка обчислює та повертає площу прямокутника зі сторонами а і б
-const area_rectangle = (a,b) => {
-    return a*b
-}
+const area_rectangle = (a,b) =>a*b;
 console.log(area_rectangle(2,3))
 
 
 // - створити функцію яка обчислює та повертає площу кола з радіусом r
-const  area_circle = (r) => {
-        return 3.14*(r**2)
-}
+const  area_circle = (r) =>3.14*(r**2);
+
 console.log(area_circle(5))
 
 
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
-let  area_cylinder =  (h,r)=> {
-    return 2*3.14*r*(h+r)
-}
+let  area_cylinder =  (h,r)=>2*3.14*r*(h+r);
 console.log(area_cylinder(5,7))
 
 
