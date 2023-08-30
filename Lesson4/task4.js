@@ -31,7 +31,7 @@ print_user(user)
 
 // - створити функцію яка створює параграф з текстом. Текст задати через аргумент
 function paragraf (text){
-    console.log('  ',text)
+   document.write(`<p> ${text}</p>`)
 }
 paragraf('Privet');
 
@@ -128,10 +128,18 @@ console.log(myarray);
 // - Написати функцію обміну валюти exchange(sumUAH,currencyValues,exchangeCurrency)
 
 function exchange (sumUAH,currencyValues,exchangeCurrency) {
-        const exchangeSum = sumUAH / exchangeCurrency;
-        return console.log(exchangeSum);
+    for (let cur of currencyValues) {
+        if (cur.currency === exchangeCurrency) {
+            return sumUAH / cur.value;
+        }
+    }
    }
 
-exchange(10000,'usd',40);
-exchange(10000,'eur',42);
+let currencyValues = [
+    {currency:'usd', value:40},
+    {currency:'EUR', value:42}
+]
+
+console.log(exchange(10000,currencyValues,'usd'));
+
 // Приклад exchange(10000,[{currency:'USD',value:40},{currency:'EUR',value:42}],'USD') // => 250
