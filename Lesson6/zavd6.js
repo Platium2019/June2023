@@ -35,6 +35,7 @@ while (str.charAt(0) === ' ') {
 while (str.charAt(str.length -1) === ' ') {
     str = str.slice(0, -1);
 }
+console.log(str.trim());
 console.log(str)
 
 // - Напишіть функцію stringToarray(str), яка перетворює рядок на масив слів.
@@ -92,19 +93,18 @@ const colorCard = ['red','black'];
 
 let cardsDesc=[]
 for (const suit of cardSuits) {
-    for (const value of values) {
-        for (const color of colorCard) {
-            cardsDesc.push({suit, value, color});
+    for (const value of values){
+            let color = (suit === 'heart' || suit === 'diamond') ? 'red' : 'black';
+             cardsDesc.push({suit, value, color});
         }
     }
-}
 console.log(cardsDesc);
 // - знайти піковий туз
 const piqAce = cardsDesc.filter(card => card.suit == 'spade' && card.value == 'ace'&&card.color =='black');
 console.log(piqAce);
 // - всі шістки
-// const piqAce = cardsDesc.filter(card => card.suit == 'spade' && card.value == 'ace'&&card.color =='black');
-// console.log('sad',piqAce);
+ const six = cardsDesc.filter(card => card.value ==6);
+ console.log(six);
 // - всі червоні карти
 const redCard = cardsDesc.filter(card =>card.color == 'red');
 console.log(redCard);
