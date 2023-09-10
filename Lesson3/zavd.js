@@ -50,7 +50,7 @@
 // -----------------------------------------------
 document.write(`<ul>`);
 for (let i = 0; i < listOfItems.length; i++) {
-     document.write(`<ul> <li>${listOfItems[i]}</li> </ul`)
+     document.write(`<li>${listOfItems[i]}</li>`)
 
 }
 document.write(`</ul>`);
