@@ -3,8 +3,9 @@
 function userFactoryFunction(id,name,surname,email,phone) {
     return {id,name,surname,email,phone}
 }
-console.log(userFactoryFunction(1,'petya','dfhfd','vovan12@gmail','654654'))
 
+console.log(userFactoryFunction(1,'petya','dfhfd','vovan12@gmail','654654'))
+console.log('створити пустий масив, наповнити його 10 об\'єктами new User(....)')
 // створити пустий масив, наповнити його 10 об'єктами new User(....)
 function User(id,name) {
     this.id = id,
@@ -24,19 +25,24 @@ let users = [
 
 ];
 console.log(users);
+
 // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+console.log('Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об\'єкти з парними id (filter)');
 console.log(users.filter(value => value.id % 2 === 0));
+
 // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+console.log('Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)');
 console.log(users.sort( (a,b) => a.id-b.id));
 
 // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+console.log('створити класс для об\'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)');
 console.log(users.sort( (a,b) => b.id-a.id));
 // створити пустий масив, наповнити його 10 об'єктами Client
 
-function Client(id, product, quantity) {
+function Client(id, product, order) {
     this.id = id,
     this.product = product,
-    this.quantity = quantity
+    this.order = order
 };
 let clients = [
     new Client(1,'watch','40'),
@@ -51,9 +57,10 @@ let clients = [
     new Client(10,'watch','70'),
 ];
 // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
-
-console.log(clients.sort((a,b) =>a.quantity-b.quantity));
+console.log('Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)');
+console.log(clients.sort((a,b) =>a.order-b.order));
 //
+console.log('Створити функцію конструктор яка дозволяє створювати об\'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об\'єм двигуна. додати в об\'єкт функції:')
 // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 function Car(model, manufacturer, year, maxSpeed, power) {
     this.model = model;
@@ -64,10 +71,12 @@ function Car(model, manufacturer, year, maxSpeed, power) {
     this.driver = 0;
 
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+    console.log('drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину')
     this.drive = function () {
         console.log(`Їдемо зі швидкістю ${this.maxSpeed} км/год`);
     };
 // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+    console.log('info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`')
     this.info = function () {
         console.log(`Модель: ${this.model}`);
         console.log(`Виробник: ${this.manufacturer}`);
@@ -76,6 +85,7 @@ function Car(model, manufacturer, year, maxSpeed, power) {
         console.log(`Об'єм двигуна: ${this.power} л`);
     };
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+    console.log( 'increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed')
     this.increaseMaxSpeed = function (newSpeed) {
         this.maxSpeed = newSpeed;
         console.log(`Максимальна швидкість збільшена на ${newSpeed} км/год`);
@@ -93,12 +103,17 @@ function Car(model, manufacturer, year, maxSpeed, power) {
 };
 //
 const clientCar = new Car('Nemo', 'Citroen', 20, 180, 1.4);
+console.log('Info');
 clientCar.info();
+console.log('Drive')
 clientCar.drive();
+console.log('increaseMaxSpeed');
 clientCar.increaseMaxSpeed(60);
+console.log('changeYear');
 clientCar.changeYear(2024);
+console.log('addDriver');
 clientCar.addDriver({ name: 'Petya'});
-
+console.log('Output change info')
 clientCar.info();
 
 
