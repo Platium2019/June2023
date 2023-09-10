@@ -95,7 +95,7 @@ let cardsDesc=[]
 for (const suit of cardSuits) {
     for (const value of values){
             let color = (suit === 'heart' || suit === 'diamond') ? 'red' : 'black';
-             cardsDesc.push({suit, value, color});
+             cardsDesc.push({suit: suit, value: value, color: color});
         }
     }
 console.log(cardsDesc);
