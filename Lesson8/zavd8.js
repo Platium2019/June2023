@@ -127,7 +127,7 @@ class Carone {
         this.year = year;
         this.maxSpeed = maxSpeed;
         this.power = power;
-        this.driver = 0;
+        this.driver = null;
     }
 // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
     drive() {
