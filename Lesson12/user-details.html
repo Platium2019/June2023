@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id = "userList">
+
+</div>
+
+<script>
+
+    const userList = document.getElementById("userList");
+    const url = new URL(location.href);
+   let userId =url.searchParams.get('id');
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+        .then(response => response.json())
+        .then(user => {
+         for (const key in user) {
+
+             userList.innerHTML = `
+                <h2>${user.name}</h2>
+                <p>Username: ${user.username}</p>
+                <p>Email: ${user.email}</p>
+                <p>Address:<br> street - ${user.address.street} <br> suite - ${user.address.suite}
+                 <br>city - ${user.address.city}, <br> zipcode - ${user.address.zipcode},<br>
+              geo:  lat (${user.address.geo.lat}),(lng${user.address.geo.lng})</p>
+                <p>Phone: ${user.phone}</p>
+                <p>Website: <a href="${user.website}" target="_new">${user.website}</a></p>
+                <p>Company:<br> name - ${user.company.name},
+                 <br > catchPhrase - ${user.company.catchPhrase},<br>
+                  bs -  ${user.company.bs}</p>
+            `;
+           }
+        });
+
+</script>
+
+</body>
+</html>
