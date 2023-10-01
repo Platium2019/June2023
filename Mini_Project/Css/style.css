@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive;
+
+}
+
+button {
+    height: 25px;
+    width: 151px;
+    border-radius: 50px;
+}
+
+button:hover {
+    background: aqua;
+    color: darkblue;
+}
+
+button.details-button {
+    margin-top: 10px;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-block, .post-block, .comment-block {
+    border: 3px solid grey;
+    padding: 10px;
+    margin: 10px;
+}
+
+.user-block {
+    width: calc(50% - 20px);
+
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+    color: darkred;
+}
+
+p {
+    margin: 10px;
+}
+
+button.post-details-button {
+    bottom: 7px;
+}
+
+.block-user-details {
+    border: 6px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userDetails {
+    display: flex;
+    justify-content: center;
+}
+
+button.posts-button {
+    margin: 17px;
+}
+
+.user-posts, .comments {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-block {
+    width: 326px;
+    height: 177px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-details {
+    text-align: center;
+}
+
+.post-info {
+    border: 4px solid grey;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 90%;
+
+}
+
+.comment-block {
+    border: 2px solid grey;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33% - 20px);
+
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    margin: 20px 10px;
+}
