@@ -79,7 +79,7 @@ button.posts-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width:  calc(19% - -2px);
+    width:  calc(19% - 6px);
 }
 
 .post-details {
